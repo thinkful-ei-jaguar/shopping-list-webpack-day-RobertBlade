@@ -1,10 +1,8 @@
-import $ from 'jquery';
+import shoppingList from './scripts/shopping-list';
 
-function main() {
-  console.log('DOM is loaded');
-
-  const startMsg = $('<p>Webpack is working!</p>');
-  $('#root').append(startMsg);
-}
+const main = function () {
+  shoppingList.bindEventListeners();
+  shoppingList.render();
+};
 
 $(main);
